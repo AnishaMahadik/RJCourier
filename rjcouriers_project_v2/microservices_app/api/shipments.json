@@ -1,0 +1,42 @@
+[
+  {
+    "id": "RJ100001",
+    "name": "John",
+    "from": "Mumbai",
+    "to": "Pune",
+    "weight": 2,
+    "status": "In Transit"
+  },
+  {
+    "id": "RJ100002",
+    "name": "Ram",
+    "from": "Delhi",
+    "to": "Noida",
+    "weight": 1.5,
+    "status": "Delivered"
+  },
+  {
+    "id": "RJ100003",
+    "name": "Sam",
+    "from": "Bengaluru",
+    "to": "Mysore",
+    "weight": 3,
+    "status": "Created"
+  },
+  {
+    "id": "RJ100004",
+    "name": "Veer",
+    "from": "Jaipur",
+    "to": "Ajmer",
+    "weight": 0.8,
+    "status": "In Transit"
+  },
+  {
+    "id": "RJ100005",
+    "name": "Niki",
+    "from": "Hyderabad",
+    "to": "Warangal",
+    "weight": 4,
+    "status": "Out for Delivery"
+  }
+]

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>RJCouriers — Monolith (Dark)</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">RJCouriers<span class="dot">.</span></div>
+    <nav>
+      <button data-section="home" class="active">Home</button>
+      <button data-section="create">New Shipment</button>
+      <button data-section="track">Track</button>
+      <button data-section="pricing">Pricing</button>
+      <button data-section="admin">Admin</button>
+    </nav>
+    <footer>v2 • Monolith</footer>
+  </aside>
+  <main class="content">
+    <header class="top">
+      <h1 id="pageTitle">Welcome</h1>
+      <div class="actions"><button id="openCreate">Quick Create</button></div>
+    </header>
+
+    <section id="home" class="panel show">
+      <h2>Recent Shipments</h2>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <section id="create" class="panel">
+      <h2>Create Shipment</h2>
+      <form id="createForm" class="form">
+        <div class="row"><label>Name<input name="name" required></label><label>From<input name="from" required></label></div>
+        <div class="row"><label>To<input name="to" required></label><label>Weight (kg)<input name="weight" type="number" step="0.1" value="1" required></label></div>
+        <div class="row"><button type="submit" class="primary">Create Shipment</button></div>
+      </form>
+      <div id="createMsg" class="msg"></div>
+    </section>
+
+    <section id="track" class="panel">
+      <h2>Track</h2>
+      <div class="trackBox">
+        <input id="trackId" placeholder="Enter shipment ID e.g. RJ100001">
+        <button id="doTrack">Track</button>
+      </div>
+      <div id="trackResult" class="trackResult"></div>
+    </section>
+
+    <section id="pricing" class="panel">
+      <h2>Pricing Calculator</h2>
+      <label>Distance (km)<input id="dist" type="number" value="10"></label>
+      <label>Weight (kg)<input id="pweight" type="number" value="1"></label>
+      <button id="calcPrice" class="primary">Calculate</button>
+      <div id="priceResult" class="msg"></div>
+    </section>
+
+    <section id="admin" class="panel">
+      <h2>Admin</h2>
+      <label>Admin Password<input id="adminPass" type="password"></label>
+      <button id="adminLogin">Unlock</button>
+      <div id="adminArea" style="display:none;"><table id="allShipments"></table></div>
+    </section>
+  </main>
+</div>
+
+<!-- modal -->
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modalContent">
+    <button id="closeModal" class="close">✕</button>
+    <h3>Quick Create</h3>
+    <form id="modalForm">
+      <label>Name<input name="name" required></label>
+      <label>From<input name="from" required></label>
+      <label>To<input name="to" required></label>
+      <label>Weight<input name="weight" type="number" value="1" step="0.1"></label>
+      <div style="margin-top:12px"><button type="submit" class="primary">Create</button></div>
+    </form>
+    <div id="modalMsg"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

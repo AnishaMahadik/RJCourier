@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>RJCouriers — Microservices (Bright)</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1>RJCouriers</h1>
+    <p>Microservices Demo — Shipments & Pricing</p>
+    <div class="heroActions"><button id="openTrack">Track Order</button><button id="openCreate">Create Shipment</button></div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="grid" id="grid"></section>
+</main>
+
+<!-- track modal -->
+<div id="trackModal" class="modal" aria-hidden="true">
+  <div class="modalInner">
+    <button id="closeTrack" class="close">✕</button>
+    <h3>Track Shipment</h3>
+    <input id="tid" placeholder="Enter ID e.g. RJ100002">
+    <button id="goTrack">Search</button>
+    <div id="tres"></div>
+  </div>
+</div>
+
+<!-- create modal -->
+<div id="createModal" class="modal" aria-hidden="true">
+  <div class="modalInner">
+    <button id="closeCreate" class="close">✕</button>
+    <h3>Create Shipment (Simulated)</h3>
+    <form id="createForm">
+      <label>Name<input name="name" required></label>
+      <label>From<input name="from" required></label>
+      <label>To<input name="to" required></label>
+      <label>Weight<input name="weight" type="number" value="1"></label>
+      <button type="submit">Create</button>
+    </form>
+    <div id="cres"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
